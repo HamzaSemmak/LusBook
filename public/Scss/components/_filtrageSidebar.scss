@@ -1,0 +1,128 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the fitrage sidebar of the site/application.
+// -----------------------------------------------------------------------------
+
+@import '../abstracts/variables';
+@import '../abstracts/mixins';    
+
+.sidebar {
+    position: fixed;
+    top: 0%;
+    background-color: $light-color;
+    width: 300px;
+    height: 100vh;
+    z-index: 101;
+    transition: 0.5s;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scroll-behavior: auto;
+    padding: 8px;
+    @include small {
+        width: 100%;
+        height: 100vh;
+        z-index: 101;
+        transition: 0.5s;
+        overflow-y: auto;
+        overflow-x: auto;
+    }
+    &::-webkit-scrollbar {
+        width: 5px;
+        background-color: $white-color;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: $dark-color;
+        height: 20px !important;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+        background: $dark-color; 
+        height: 20px !important;
+    }
+    .close-box {
+        font-size: 20px;
+        text-align: right;
+        color: $dark-color;
+        margin: 0 8px;
+        cursor: pointer;
+    }
+    .title {
+        text-align: left;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 14px;
+        color: $dark-color;
+        margin-block-end: 8px;
+        margin-block-start: 20px;
+    }
+    .range-box {
+        background-color: $light-color;
+        border-radius: 10px;
+        padding: 10px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        flex-direction: column;
+        .rangeValueManValue, .rangeValueMinValue, .output{
+            border: none;
+            outline: none;
+            background-color: transparent;
+            width: auto;
+            height: 30px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 600;
+            color: $dark-color;
+        }
+        .line {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+            font-size: 0.7rem;
+            font-weight: 900;
+            color: $primary-color;
+        }
+        input[type="range"] {
+            width: 96%;
+            border-radius: 10px;
+        }
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            background-color: $dark-color;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: .3s ease-in-out;
+        }
+        input[type="range"]::-webkit-slider-thumb:hover {
+            background-color: $dark-color;
+        }
+        input[type="range"]::-webkit-slider-thumb:active {
+            transform: scale(1.6);
+        }
+    }
+    .d-flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5px 10px 10px 10px;
+        position: relative;
+        .text {
+            font-weight: 500;
+            font-size: 14px;
+            color: $dark-color;
+        }
+        span {
+            position: relative;
+            font-size: 14px;
+            color: $first-color;
+        }
+        &:hover {
+            cursor: pointer;
+            background-color: $white-color;
+        }
+    }
+}

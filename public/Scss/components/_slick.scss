@@ -1,0 +1,38 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the Home of the site/application.
+// -----------------------------------------------------------------------------
+
+
+@import '../abstracts/functions';
+@import '../abstracts/mixins';
+@import '../abstracts/variables';
+
+
+.slick-next,
+.slick-prev {
+    position: absolute;
+    top: -9%;
+    transform: translate(-50%, -50%);
+    font-size: 26px;
+    color: $primary-color;
+    @include x-large {
+        font-size: 22px;
+    }
+    @include meduim {
+        top: -11%;
+        font-size: 18px;
+    }
+    @include small {
+        top: -13%;
+    }
+}
+.slick-next {
+    right: 2%;
+    @include x-large {
+        right: 4%;
+    }
+}
+.slick-prev {
+    right: 0%;
+}
+

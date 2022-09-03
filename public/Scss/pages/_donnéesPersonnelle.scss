@@ -1,0 +1,110 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the Home/donnéesPersonnelle of the site/application.
+// -----------------------------------------------------------------------------
+
+
+@import '../abstracts/functions';
+@import '../abstracts/mixins';
+@import '../abstracts/variables';
+
+.donnéesPersonnelle {
+    width: 100%;
+    height: auto;
+    padding: 40px;
+    .container {
+        height: auto;
+        .title {
+            font-size: 30px;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-style: normal;
+            margin-block-end: 25px;
+            color: $primary-color;
+        }
+        .content {
+            width: 100%;
+            height: 100%;
+            .row {
+                width: 100%;
+                height: 100%;
+                .red-marque {
+                    color: red;
+                }
+                label {
+                    font-size: 15px;
+                    color: $first-color;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}
+
+/*
+*
+*   Media Query : 
+*
+*/
+@include x-large {
+    .donnéesPersonnelle {
+        padding: 30px;
+        .container {
+            .title {
+                font-size: 25px;
+                margin-block-end: 20px;
+                text-align: center;
+                width: 100%;
+            }
+            .content {
+                .row {
+                    label {
+                        font-size: 15px;
+                    }
+                    .col-12 {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include meduim {
+    .donnéesPersonnelle {
+        padding: 10px;
+        .container {
+            .title {
+                font-size: 24x;
+                margin-block-end: 15px;
+            }
+            .content {
+                .row {
+                    padding: 0;
+                    label {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include small {
+    .donnéesPersonnelle {
+        padding: 10px;
+        .container {
+            .title {
+                font-size: 16px;
+            }
+            .content {
+                .row {
+                    padding: 0;
+                    label {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}

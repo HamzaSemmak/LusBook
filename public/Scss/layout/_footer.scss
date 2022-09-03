@@ -1,0 +1,525 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+
+
+@import '../abstracts/functions';
+@import '../abstracts/mixins';
+@import '../abstracts/variables';
+
+footer {
+    width: 100%;
+    height: auto;
+    .section-one {
+        width: 100%;
+        height: auto;
+        .container, .row {
+            width: 100%;
+            height: auto;
+            .col-6 {
+                height: auto;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                .card-footer {
+                    width: 255px;
+                    height: 190px;
+                    margin: 10px 15px;
+                    text-align: center;
+                    cursor: pointer;
+                    .card-icon {
+                        width: 100%;
+                        height: 40px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        ion-icon {
+                            font-size: 25px;
+                            color: $dark-color;
+                            &:hover {
+                                transform: rotateX(10deg);
+                                transition: all 0.3s ease;
+                                margin-bottom: 20px;
+                            }
+                        }
+                    }
+                    .card-title {
+                        font-size: 20px;
+                        font-weight: 600;
+                        font-style: normal;
+                        color: $dark-color;
+                        margin-block: 10px;
+                    }
+                    .card-text {
+                        font-size: 14px;
+                        font-weight: normal;
+                        color: $first-color;
+                    }
+                }
+            }
+        }
+        
+    }
+    .section-tow {
+        height: auto;
+        width: 100%;
+        padding: 10px;
+        .row,
+        .container {
+            height: auto;
+            .col-8 {
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-evenly;
+                ul {
+                    li:nth-child(1) {
+                        font-size: 18px;
+                        font-weight: 700;
+                        font-style: normal;
+                        color: $dark-color;
+                        line-height: 50px;
+                        letter-spacing: 1.5px;
+                    }
+                    li {
+                        position: relative;
+                        a {
+                            font-size: 16px;
+                            font-weight: 500;
+                            font-style: normal;
+                            color: $first-color;
+                            line-height: 33px;
+                            letter-spacing: 1.5px;
+                            width: auto;
+                        }
+                        a::after {
+                            content: "";
+                            position: absolute;
+                            background-color: $dark-color;
+                            height: 1px;
+                            width: 0;
+                            left: 0;
+                            bottom: -2px;
+                            transition: 0.3s;
+                        }
+                        a:hover::after {
+                            width: 100%;
+                        }
+                    }
+                   
+                }
+            }
+            .col-4 {
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-start;
+                flex-direction: column;
+                padding: 10px;
+                h5 {
+                    font-size: 25px;
+                    font-weight: 800;
+                    font-style: normal;
+                    color: $dark-color;
+                    letter-spacing: 1px;
+                }
+                .text {
+                    font-size: 16px;
+                    font-weight: 500;
+                    font-style: normal;
+                    color: $dark-color;
+                    width: auto;
+                }
+                .liens {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-block-start: 25px;
+                    width: 100%;
+                    padding-right: 30px;
+                    .icons {
+                        color: $dark-color;
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
+    }
+    .section-tree {
+        width: 100%;
+        margin: 0 auto;
+        margin-block: 20px;
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            ion-icon {
+                font-size: 35px;
+                color: $primary-color;
+                transition: $tran-02;
+            }
+            span {
+                font-size: 20px;
+                font-style: normal;
+                color: $primary-color;
+                margin-left: 10px;
+                font-weight: 600;
+                letter-spacing: 1.5px;
+                transition: $tran-05;
+            }
+        }
+    }
+}
+
+/*
+*
+*   Media Query :
+*
+*/
+@include xx-large {
+    footer {
+        .section-one {
+            .container, .row {
+                .col-6 {
+                    .card-footer {
+                        width: 220px;
+                        height: 190px;
+                        margin: 10px 0px;
+                    }
+                }
+            }
+        }
+        .section-tow {
+            padding: 0px;
+            .row,
+            .container {
+                .col-8 {
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: space-evenly;
+                    ul {
+                        li:nth-child(1) {
+                            font-size: 18px;
+                            line-height: 50px;
+                            letter-spacing: 1.5px;
+                        }
+                        li {
+                            a {
+                                font-size: 16px;
+                                line-height: 33px;
+                                letter-spacing: 1.5px;
+                            }
+                        }
+                    }
+                }
+                .col-4 {
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    flex-direction: column;
+                    padding: 10px;
+                    h5 {
+                        font-size: 25px;
+                        letter-spacing: 1px;
+                    }
+                    .text {
+                        font-size: 16px;
+                        width: auto;
+                    }
+                    .liens {
+                        margin-block-start: 25px;
+                        padding-right: 00px;
+                        .icons {
+                            font-size: 30px;
+                        }
+                    }
+                }
+            }
+        }
+        .section-tree {
+            margin-block: 20px;
+            .logo {
+                ion-icon {
+                    font-size: 35px;
+                }
+                span {
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+}
+
+@include x-large {
+    footer {
+        .section-one {
+            .container, .row {
+                padding: 10px;
+                .col-6 {
+                    justify-content: center;
+                }
+            }
+            
+        }
+        .section-tow {
+            .row,
+            .container {
+                .col-8 {
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: space-around;
+                    ul {
+                        li:nth-child(1) {
+                            font-size: 18px;
+                            line-height: 50px;
+                            letter-spacing: 1.5px;
+                        }
+                        li {
+                            a {
+                                font-size: 16px;
+                                line-height: 33px;
+                                letter-spacing: 1.5px;
+                            }
+                        }
+                    }
+                }
+                .col-4 {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    padding: 10px;
+                    margin-block-start: 20px;
+                    h5 {
+                        font-size: 25px;
+                        letter-spacing: 1px;
+                    }
+                    .text {
+                        font-size: 16px;
+                        width: auto;
+                        padding-left: 30px;
+                        padding-right: 30px;
+                        text-align: center;
+                    }
+                    .liens {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-around;
+                        margin-block-start: 25px;
+                        padding-right: 00px;
+                        .icons {
+                            font-size: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include large {
+    footer {
+        .section-one {
+            .container, .row {
+                padding: 0px;
+                .col-6 {
+                    justify-content: center;
+                    .card-footer {
+                        width: 250px;
+                        height: 190px;
+                        margin: 0px 20px;
+                        .card-icon {
+                            width: 100%;
+                            height: 40px;
+                            ion-icon {
+                                font-size: 20px;
+                            }
+                        }
+                        .card-title {
+                            font-size: 16px;
+                            margin-block: 8px;
+                        }
+                        .card-text {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+            
+        }
+        .section-tow {
+            .row,
+            .container {
+                .col-8 {
+                    justify-content: space-around;
+                    ul {
+                        li:nth-child(1) {
+                            font-size: 16px;
+                            line-height: 40px;
+                            letter-spacing: 1.2px;
+                        }
+                        li {
+                            a {
+                                font-size: 14px;
+                                line-height: 28px;
+                                letter-spacing: 1.2px;
+                            }
+                        }
+                    }
+                }
+                .col-4 {
+                    display: block;
+                    padding: 0px;
+                    margin-block-start: 20px;
+                    text-align: center;
+                    h5 {
+                        font-size: 20px;
+                    }
+                    .text {
+                        font-size: 14px;
+                        padding-left: 30px;
+                        padding-right: 30px;
+                    }
+                    .liens {
+                        justify-content: space-around;
+                        margin-block-start: 20px;
+                        .icons {
+                            font-size: 25px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include meduim {
+    footer {
+        .section-one {
+            margin-block-end: 20px;
+            .container, .row {
+                .col-6 {
+                    .card-footer {
+                        width: 160px;
+                        height: 100px;
+                        margin: 0px 10px;
+                        .card-icon {
+                            height: auto;
+                            ion-icon {
+                                font-size: 16px;
+                            }
+                        }
+                        .card-title {
+                            font-size: 14px;
+                            margin-block: 6px;
+                        }
+                        .card-text {
+                            font-size: 10px;
+                        }
+                    }
+                }
+            }
+            
+        }
+        .section-tow {
+            .row,
+            .container {
+                .col-8 {
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    text-align: center;
+                    ul {
+                        margin-block-end: 14px;
+                        li:nth-child(1) {
+                            font-size: 16px;
+                            line-height: 30px;
+                        }
+                        li {
+                            a {
+                                font-size: 13px;
+                                line-height: normal;
+                                letter-spacing: normal;
+                            }
+                        }
+                    }
+                }
+                .col-4 {
+                    text-align: center;
+                    h5 {
+                        font-size: 18px;
+                    }
+                    .text {
+                        font-size: 13px;
+                        padding-left: 15px;
+                        padding-right: 15px;
+                    }
+                    .liens {
+                        display: block;
+                        .icons {
+                            font-size: 22px;
+                        }
+                    }
+                }
+            }
+        }
+        .section-tree {
+            margin-block: 20px;
+            .logo {
+                ion-icon {
+                    font-size: 25px;
+                }
+                span {
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+}
+
+@include small {
+    footer {
+        .section-one {
+            .container, .row {
+                padding: 10px;
+                .col-6 {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    .card-footer {
+                        width: 130px;
+                        height: 100px;
+                        margin: 0px 0px;
+                        .card-icon {
+                            height: auto;
+                            ion-icon {
+                                font-size: 14px;
+                            }
+                        }
+                        .card-title {
+                            font-size: 11px;
+                            margin-block: 6px;
+                        }
+                        .card-text {
+                            font-size: 9px;
+                        }
+                    }
+                }
+            }
+            
+        }
+        .section-tree {
+            margin-block: 20px;
+            .logo {
+                .logo {
+                    ion-icon {
+                        font-size: 20px;
+                    }
+                    span {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}

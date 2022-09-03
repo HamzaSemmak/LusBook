@@ -1,0 +1,101 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the Admin/dashboard [Espace Admin ] of the site/application.
+// -----------------------------------------------------------------------------
+
+
+@import '../../abstracts/functions';
+@import '../../abstracts/mixins';
+@import '../../abstracts/variables';
+
+.Product-page {
+    width: 100%;
+    height: auto;
+    .d-flex {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;    
+    }
+    .table-proooouct {
+        margin-top: 15px;
+        table {
+            thead,tbody {
+                tr {
+                    text-align: center;
+                }
+            }
+            .image {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                img {
+                    width: 25px;
+                    height: 25px;
+                    border-radius: 50%;
+                }
+            }
+            td {
+                a{
+                    margin: 0 15px;
+                }
+            }
+        }
+    }
+}
+
+.form-controll-product {
+    margin-top: 15px;  
+    .row {
+        width: 100%;
+        height: 100%;
+        .red-marque {
+            color: red;
+        }
+        label {
+            font-size: 15px;
+            color: $first-color;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+    } 
+}
+
+
+/*
+*
+*   Media Query : 
+*
+*/
+@include x-large {
+    .form-controll-product {
+        .row {
+            label {
+                font-size: 15px;
+            }
+            .col-12 {
+                text-align: center;
+            }
+        }
+    }    
+}
+
+@include meduim {
+    .form-controll-product {
+        margin-top: 10px;  
+        .row {
+            label {
+                font-size: 14px;
+            }
+        }
+    }  
+}
+
+@include small {
+    .form-controll-product {
+        .row {
+            label {
+                font-size: 12px;
+            }
+        }
+    }  
+}

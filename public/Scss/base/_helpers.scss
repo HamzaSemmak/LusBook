@@ -1,0 +1,46 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the base of the site/application.
+// -----------------------------------------------------------------------------
+
+@import '../abstracts/functions';
+@import '../abstracts/mixins';
+@import '../abstracts/variables';
+
+.img-fluid {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1400px;
+  overflow: hidden;
+}
+
+.container-fluid {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1600px;
+}
+
+@include x-large {
+  .container,
+  .container-fluid  {
+    max-width: none;
+  }
+}
+
+
+.exep {
+  font-size: 14px;
+  color: $first-color;
+  &:hover {
+    text-decoration: underline;
+  }
+  @include meduim {
+    font-size: 12px;
+  }
+}

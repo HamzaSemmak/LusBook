@@ -1,0 +1,45 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the alert of the site/application.
+// -----------------------------------------------------------------------------
+
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.categorie-filtarge-section {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 20px;
+    padding-left: 47px;
+    position: relative;
+    @include xxx-large {
+        padding-left: 0px;
+    }
+    @include x-large {
+        align-items: center;
+        justify-content: center;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+    @include meduim {
+        margin-block: 10px;
+        padding: 5px;
+    }
+    div {
+        font-size: 16px;
+        color: $dark-color;
+        font-weight: 400;
+        text-transform: uppercase;
+        cursor: pointer;
+        margin: 0 30px;
+        position: relative;
+        @include large {
+            font-size: 14px;
+        }
+        @include small {
+            font-size: 12px;
+        }
+    }
+}  

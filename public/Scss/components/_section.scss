@@ -1,0 +1,27 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the Searchbar of the site/application.
+// -----------------------------------------------------------------------------
+
+
+@import '../abstracts/functions';
+@import '../abstracts/mixins';
+@import '../abstracts/variables';
+
+
+section {
+    margin-block-end: 20px;
+    padding: 10px;
+}
+
+/*
+*
+*   Medai Query :
+*
+*/
+
+@include xxx-large {
+    section {
+        margin-block-end: 0px;
+        padding: 10px;
+    }
+}

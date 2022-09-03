@@ -1,0 +1,150 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the  of the site/application.
+// -----------------------------------------------------------------------------
+
+
+@import '../abstracts/variables';
+@import '../abstracts/functions';
+@import '../abstracts/mixins';
+
+.section-image-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    margin: 10px 0 10px 0;
+    .row {
+        .img-field {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .text-field {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .col-6 {
+            padding: 30px;
+            overflow: hidden;
+            img {
+                height: 500px;
+                width: 500px;
+            }
+            .title {
+                font-size: 32px;
+                color: $dark-color;
+                font-weight: 600;
+                text-transform: uppercase;
+                margin: 5px 0;
+            }
+            .text {
+                font-size: 16px;
+                color: $first-color;
+                font-weight: 400;
+                margin: 15px 0;
+            }
+        }
+    }
+}
+@include x-large {
+    .section-image-text {
+        margin: 15px 0 15px 0;
+        .row {
+            .img-field , .text-field{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+            }
+            .col-6 {
+                text-align: center;
+                padding: 30px;
+                img {
+                    height: 500px;
+                    width: 500px;
+                }
+                .title {
+                    font-size: 32px;
+                    margin: 5px 0;
+                }
+                .text {
+                    font-size: 16px;
+                    margin: 15px 0;
+                }
+            }
+        }
+    }
+}
+@include large {
+    .section-image-text {
+        margin: 15px 0 15px 0;
+        .row {
+            .img-field , .text-field{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+            }
+            .col-6 {
+                padding: 0px;
+                img {
+                    height: 400px;
+                    width: 400px;
+                }
+                .title {
+                    font-size: 32px;
+                    margin: 5px 0;
+                }
+                .text {
+                    font-size: 16px;
+                    margin: 15px 0;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+@include meduim {
+    .section-image-text {
+        margin: 10px 0 10px 0;
+        .row {
+            .col-6 {
+                img {
+                    height: 300px;
+                    width: 300px;
+                }
+                .title {
+                    font-size: 25px;
+                    margin: 5px 0;
+                }
+                .text {
+                    font-size: 14px;
+                    margin: 10px 0;
+                }
+            }
+        }
+    }
+}
+@include small {
+    .section-image-text {
+        margin: 10px 0 10px 0;
+        .row {
+            .col-6 {
+                img {
+                    display: none;
+                }
+                .title {
+                    font-size: 18px;
+                    margin: 5px 0;
+                }
+                .text {
+                    font-size: 12px;
+                    margin: 10px 0;
+                }
+            }
+        }
+    }
+}

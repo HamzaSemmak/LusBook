@@ -1,0 +1,327 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the Admin/dashboard [Espace Admin ] of the site/application.
+// -----------------------------------------------------------------------------
+
+
+@import '../abstracts/functions';
+@import '../abstracts/mixins';
+@import '../abstracts/variables';
+
+.dashboard-body {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #f0f2f4;
+    .sidebar-dashboard {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 240px;
+        background-color: $dark-color;
+        padding: 6px 14px;
+        transition: all 0.5s ease;
+        &.active {
+            width: 78px;
+            .logo-content {
+                .logo {
+                    a {
+                        .sidebar-link-name {
+                            opacity: 0;
+                            pointer-events: none;
+                        }
+                    }
+                }
+            }
+            .sidebar-items {
+                .sidebar-link {
+                    a {
+                        .sidebar-link-name {
+                            opacity: 0;
+                            pointer-events: none;
+                        }
+                    }
+                }
+            }
+        }
+        .logo-content {
+            .logo {
+                list-style: none;
+                position: relative;
+                height: 50px;
+                width: 100%;
+                margin: 5px 5px;
+                line-height: 50px;
+                a {
+                    display: flex;
+                    align-items: center;
+                    text-decoration: none;
+                    transition: all .4s ease;
+                    border-radius: 10px;
+                    background-color: $first-color;
+                    .icon-planet{
+                        color: $white-color;
+                        height: 50px;
+                        min-width: 50px;
+                        border-radius: 10px;
+                        line-height: 50px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        ion-icon {
+                            font-size: 30px;
+                        }
+                    }
+                    .sidebar-link-name {
+                        color: $white-color;
+                        font-size: 16px;
+                        opacity: 1;
+                        pointer-events: auto;
+                    }
+                }
+            }
+        }
+        .sidebar-items {
+            margin-top: 20px;
+            .sidebar-link {
+                list-style: none;
+                position: relative;
+                height: 50px;
+                width: 100%;
+                margin: 5px 5px;
+                line-height: 50px;
+                a {
+                    display: flex;
+                    align-items: center;
+                    text-decoration: none;
+                    transition: all .4s ease;
+                    border-radius: 10px;
+                    &:hover {
+                        background-color: $first-color;
+                    }
+                    i {
+                        color: $white-color;
+                        height: 50px;
+                        min-width: 50px;
+                        border-radius: 10px;
+                        line-height: 50px;
+                        text-align: center;
+                    }
+                    .sidebar-link-name {
+                        color: $white-color;
+                        font-size: 16px;
+                        opacity: 1;
+                        pointer-events: auto;
+                    }
+                }
+            }
+        }
+    }
+}
+.dashboard-content {
+    position: absolute;
+    height: 100%;
+    width: calc(100% - 240px);
+    left: 240px;
+    transition: all 0.5s ease;
+    .dashboard-navbar {
+        width: 100%;
+        height: 75px;
+        background-color: $white-color;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px 0 20px;
+        .sidebar-dashboard-toggler {
+            color: $dark-color;
+            font-size: 25px;
+            cursor: pointer;
+        }
+        .search-box {
+            height: 50px;
+            width: 40%;
+            border-radius: 40px;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transform: 0.6s;
+            padding: 10px;
+            background-color: #f0f2f4;
+            button {
+                color: $dark-color;
+                float: right;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background-color: #f0f2f4;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: none;
+                ion-icon{
+                    font-size: 22px;
+                    font-weight: 900;
+                }
+            }
+            input {
+                width: 90%;
+                padding-left: 10px;
+                border: none;
+                background: none;
+                outline: none;
+                float: left;
+                color: $dark-color;
+                background-color: #f0f2f4;
+                font-size: 16px;
+                line-height: 40px;
+                &::placeholder {
+                    padding-left: 10px;
+                }
+            }
+        }
+        .admin-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .admin-name {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: $dark-color;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                transition: 0.5s;
+                font-size: 15px;
+                img {
+                    padding: 0 5px;
+                }
+            }
+        }
+    }
+    .content {
+        padding: 15px;
+        @include large {
+            padding: 10px;
+        }
+    }
+}
+.sidebar-dashboard.active ~ .dashboard-content {
+    width: calc(100% - 78px);
+    left: 78px;
+}
+
+@include x-large {
+    .dashboard-body {
+        .sidebar-dashboard {
+            width: 78px;
+            &.active {
+                width: 78px;
+            }
+            .logo-content {
+                .logo {
+                    a {
+                        .sidebar-link-name {
+                            display: none;
+                        }
+                    }
+                }
+            }
+            .sidebar-items {
+                .sidebar-link {
+                    a {
+                        .sidebar-link-name {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+        .dashboard-content {
+            width: calc(100% - 78px);
+            left: 78px;
+            .sidebar-dashboard-toggler {
+                display: block;
+            }
+            .admin-box {
+                span {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@include x-large {
+    .dashboard-body {
+        .sidebar-dashboard {
+            width: 0;
+            left: -78px;
+            &.active {
+                width: 78px;
+                left: 0;
+            }
+        }
+        .dashboard-content {
+            width: 100%;
+            left: 0;
+            .sidebar-dashboard-toggler {
+                display: block;
+            }
+            .search-box {
+                width: 70%;
+            }
+        }
+    }
+    .sidebar-dashboard.active ~ .dashboard-content {
+        width: calc(100% - 78px);
+        left: 78px;
+        @include meduim {
+            .dashboard-navbar {
+                .search-box {
+                    transition: 0.3s;
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.dashboard-title {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    margin-block-end: 15px;
+    @include meduim {
+        margin-block-end: 10px;
+        margin-block-start: 8px;
+    }
+    i {
+        width: 35px;
+        height: 35px;
+        color: $white-color;
+        background-color: $border-color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        font-size: 18px;
+        margin: 0px 8px;
+        @include meduim {
+            height: 30px;
+            width: 30px;
+            font-size: 15px;
+        }
+    }
+    span {
+        font-size: 20px;
+        letter-spacing: 1.3px;
+        font-weight: 600;
+        color: $dark-color;
+        @include meduim {
+            font-size: 18px;
+            letter-spacing: 1.1px;
+        }
+    }
+}

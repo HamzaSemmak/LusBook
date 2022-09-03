@@ -1,0 +1,157 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the panier of the site/application.
+// -----------------------------------------------------------------------------
+
+
+@import '../abstracts/variables';
+@import '../abstracts/functions';
+@import '../abstracts/mixins';
+
+.order {
+    min-height: 110vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .content {
+        max-width: 800px;
+        margin: 0 auto;
+        width: 100%;
+        padding: 10px;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+        background-color: $white-color;
+        .row {
+            height: 100%;
+            width: 100%;
+            .col-6 {
+                height: 100%;
+                .red-marque {
+                    color: red;
+                }
+                label {
+                    font-size: 15px;
+                    color: $first-color;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                }
+                .title {
+                    font-size: 20px;
+                    color: dark-color;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    margin-block-end: 10px;
+                    text-align: center;
+                }
+                .card-accepted {
+                    padding-left: 20px;
+                    padding-right: 20px;
+
+                    margin-block-end: 15px;
+                }
+            }
+            .col-12 {
+                color: $first-color;
+                font-size: 12px;
+                text-align: center;
+            }
+        }
+    }
+}
+
+/*
+*
+*   Media Query : 
+*
+*/
+@include xxx-large {
+    .order {
+        height: 100vh;
+        .content {
+            max-width: 900px;
+        }
+    }
+}
+
+@include x-large {
+    .order {
+        height: auto;
+        padding: 20px;
+        .content {
+            .row {
+                .col-6 {
+                    margin-block-end: 15px;
+                    label {
+                        font-size: 15px;
+                    }
+                    .title {
+                        font-size: 20px;
+                        margin-block-end: 10px;
+                    }
+                    .card-accepted {
+                        padding-left: 20px;
+                        padding-right: 20px;
+                        margin-block-end: 15px;
+                    }
+                }
+                .col-12 {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+@include meduim {
+    .order {
+        height: auto;
+        padding: 15px;
+        .content {
+            .row {
+                .col-6 {
+                    margin-block-end: 10px;
+                    label {
+                        font-size: 14px;
+                    }
+                    .title {
+                        font-size: 16px;
+                        margin-block-end: 15px;
+                    }
+                    .card-accepted {
+                        padding: 10px;
+                        margin-block-end: 20px;
+                    }
+                }
+                .col-12 {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+@include small {
+    .order {
+        padding: 8px;
+        .content {
+            .row {
+                .col-6 {
+                    margin-block-end: 10px;
+                    label {
+                        font-size: 12px;
+                    }
+                    .title {
+                        font-size: 14px;
+                        margin-block-end: 10px;
+                    }
+                    .card-accepted {
+                        padding: 5px;
+                        margin-block-end: 15px;
+                    }
+                }
+                .col-12 {
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+}

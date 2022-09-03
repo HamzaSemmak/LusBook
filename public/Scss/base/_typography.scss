@@ -1,0 +1,144 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the base of the site/application.
+// -----------------------------------------------------------------------------
+
+@import '../abstracts/variables';
+@import './font';
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    background-color: $light-color;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    appearance: none;
+}
+
+a {
+    text-decoration: none;
+    color: $dark-color;
+}
+
+.body-gray {
+    background-color: $light-color;
+}
+
+ul,ol {
+    list-style: none;
+}
+
+.wave-animation::before {
+    content: "";
+    position: fixed;
+    width: 300%;
+    height: 100%;
+    background-color: $gray-color;    
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) skew(0, -10deg);
+    border-radius: 50%;
+    z-index: -1;
+    animation: waving 3s ease-in-out infinite alternate;
+}
+
+@keyframes waving {
+    from {
+        transform: translateX(-50%) skew(0, -10deg);
+    }
+    to {
+        transform: translateX(-30%) skew(10deg, 0);
+    }
+}
+
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.shadow {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1) !important;
+}
+
+.shadow-navbar {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05) !important;
+}
+
+.open-accordion {
+    padding-bottom: 10px;
+}
+
+.navbar-animation {
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.6s;
+    animation-name: animatetop;
+    animation-duration: 0.6s;
+}
+
+.navbar-animation-bottom {
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 0.9s;
+    animation-name: animatebottom;
+    animation-duration: 0.9s;
+}
+
+@-webkit-keyframes animatebottom {
+    from {
+        bottom: -180px;
+    }
+    to {
+        bottom: 0;
+    }
+}
+@keyframes animatebottom {
+    from {
+        bottom: -180px;
+    }
+    to {
+        bottom: 0;
+    }
+}
+
+.sidebar-show {
+    -webkit-animation-name: showSidebar;
+    -webkit-animation-duration: 0.3s;
+    animation-name: showSidebar;
+    animation-duration: 0.3s;
+    left: 0px;
+    @include small {
+        left: 0%;
+    }
+}
+.sidebar-hide {
+    left: -300px;
+    @include small {
+        left: -100%;
+    }
+}
+@-webkit-keyframes showSidebar {
+    from {
+        left: -300px;
+    }
+    to {
+        left: 0;
+    }
+}
+@keyframes showSidebar {
+    from {
+        left: -300px;
+    }
+    to {
+        left: 0;
+    }
+}
+

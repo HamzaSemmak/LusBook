@@ -1,0 +1,201 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the Searchbar of the site/application.
+// -----------------------------------------------------------------------------
+
+
+@import '../abstracts/functions';
+@import '../abstracts/mixins';
+@import '../abstracts/variables';
+
+.searchBar {
+    width: 100%;
+    height: auto;
+    background-color: $gray-color;
+    height: 180px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05) !important;
+    position: fixed;
+    top: -300px;
+    z-index: 110;
+    .close {
+        padding: 10px;
+        width: 100%;
+        text-align: end;
+        ion-icon{
+            font-size: 25px;
+            font-weight: 900;
+
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+        
+    }
+    .text {
+        text-align: center;
+        font-size: 18px;
+        font-weight: 500;
+        font-style: normal;
+        text-transform: uppercase;
+        color: $first-color;
+    }
+    .search-box {
+        height: 100%;
+        width: 500px;
+        position: absolute;
+        top: 65%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 50px;
+        border-radius: 40px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transform: 0.6s;
+        padding: 10px;
+        background-color: $dark-color;
+        .search-btn {
+            color: $white-color;
+            float: right;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: $dark-color;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            ion-icon{
+                font-size: 20px;
+                font-weight: 900;
+            }
+        }
+        .search-txt {
+            width: 460px;
+            padding: 0 6px;
+            border: none;
+            background: none;
+            outline: none;
+            float: left;
+            padding: 0;
+            color: $white-color;
+            background-color: $dark-color;
+            font-size: 16px;
+            line-height: 40px;
+        }
+    }
+}
+
+@-webkit-keyframes animatetop {
+    from {
+      top: -180px;
+      opacity: 0;
+    }
+    to {
+      top: 0;
+      opacity: 1;
+    }
+}
+@keyframes animatetop {
+    from {
+      top: -180px;
+      opacity: 0;
+    }
+    to {
+      top: 0;
+      opacity: 1;
+    }
+}
+
+
+.show-search-bar {
+    top: 0;
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.6s;
+    animation-name: animatetop;
+    animation-duration: 0.6s;
+}
+
+@include large {
+    .searchBar {
+        height: 180px;
+        .close {
+            padding: 10px;
+            ion-icon{
+                font-size: 25px;
+            }
+        }
+        .text {
+            font-size: 16px;
+        }
+        .search-box {
+            width: 400px;
+            height: 50px;
+            padding: 10px;
+            .search-btn {
+                width: 40px;
+                height: 40px;
+                ion-icon{
+                    font-size: 20px;
+                }
+            }
+            .search-txt {
+                width: 360px;
+                padding: 0 6px;
+                font-size: 16px;
+            }
+        }
+    }
+}
+@include meduim {
+    .searchBar {
+        .close {
+            ion-icon{
+                font-size: 20px;
+            }
+        }
+        .text {
+            font-size: 16px;
+        }
+        .search-box {
+            width: 350px;
+            height: 50px;
+            padding: 10px;
+            .search-btn {
+                width: 30px;
+                height: 40px;
+                ion-icon{
+                    font-size: 20px;
+                }
+            }
+            .search-txt {
+                width: 320px;
+                padding: 0 6px;
+                font-size: 16px;
+            }
+        }
+    }
+}
+@include small {
+    .searchBar {
+        .text {
+            font-size: 14px;
+        }
+        .search-box {
+            width: 90%;
+            height: 50px;
+            padding: 10px;
+            .search-btn {
+                width: 15%;
+                height: 40px;
+                ion-icon{
+                    font-size: 20px;
+                }
+            }
+            .search-txt {
+                width: 85%;
+                font-size: 14px;
+            }
+        }
+    }
+}

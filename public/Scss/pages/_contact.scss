@@ -1,0 +1,121 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the contact of the site/application.
+// -----------------------------------------------------------------------------
+
+
+@import '../abstracts/variables';
+@import '../abstracts/functions';
+@import '../abstracts/mixins';
+
+
+.contact {
+    height: auto;
+    width: 100%;
+    .container {
+        height: auto;
+        width: 100%;
+        padding: 50px;
+        h5 {
+            font-size: 30px;
+            font-weight: 700;
+            font-style: normal;
+            letter-spacing: 1.1px;
+            color: $primary-color;
+            text-align: center;
+        }
+        .text {
+            font-size: 16px;
+            color: $first-color;
+            font-weight: 500;
+            text-align: center;
+        }
+        form {
+            padding-left: 150px;
+            padding-right: 150px;
+            margin-block-start: 30px;
+            .red-marque {
+                color: red;
+            }
+            label {
+                font-size: 15px;
+                color: $first-color;
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+/*
+*
+* Media query :
+*
+*/
+
+@include x-large {
+    .contact {
+        .container {
+            padding: 50px;
+            h5 {
+                font-size: 30px;
+            }
+            .text {
+                font-size: 16px;
+            }
+            form {
+                padding-left: 100px;
+                padding-right: 100px;
+            }
+        }
+    }
+}
+
+@include large {
+    .contact {
+        .container {
+            padding: 30px;
+            h5 {
+                font-size: 25px;
+            }
+            .text {
+                font-size: 15px;
+            }
+            form {
+                padding-left: 80px;
+                padding-right: 80px;
+            }
+        }
+    }
+}
+
+@include meduim {
+    .contact {
+        .container {
+            padding: 10px;
+            h5 {
+                font-size: 18px;
+            }
+            .text {
+                font-size: 14px;
+            }
+            form {
+                padding-left: 0px;
+                padding-right: 0px;
+            }
+        }
+    }
+}
+
+@include small {
+    .contact {
+        .container {
+            padding: 10px;
+            h5 {
+                font-size: 18px;
+            }
+            .text {
+                font-size: 12px;
+            }
+        }
+    }
+}

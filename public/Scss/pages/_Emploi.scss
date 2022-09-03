@@ -1,0 +1,97 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the emploi of the site/application.
+// -----------------------------------------------------------------------------
+
+
+@import '../abstracts/functions';
+@import '../abstracts/mixins';
+@import '../abstracts/variables';
+
+.Emploi {
+    padding: 10px;
+    width: 100%;
+    height: auto;
+    .container {
+        padding: 40px;
+        .title {
+            font-size: 25px;
+            font-weight: 600;
+            font-style: normal;
+            letter-spacing: 1.2px;
+            color: $primary-color;
+            margin-block-end: 15px;
+        }
+        .text {
+            font-size: 16px;
+            font-weight: normal;
+            font-style: normal;
+            text-align: justify;
+            line-height: 25px;
+            margin-block-end: 20px;
+            color: $first-color;
+        }
+    }
+}
+
+
+/*
+*
+*   Media Query : 
+*
+*/
+@include large {
+    .Emploi {
+        .container {
+            padding: 20px;
+            text-align: center;
+            .title {
+                font-size: 20px;
+                margin-block-end: 15px;
+            }
+            .text {
+                font-size: 15px;
+                margin-block-end: 20px;
+            }
+            h3 {
+                font-size: 17px;
+            }
+        }
+    }
+}
+
+@include meduim {
+    .Emploi {
+        .container {
+            padding: 15px;
+            .title {
+                font-size: 18px;
+                margin-block-end: 10px;
+            }
+            .text {
+                font-size: 14px;
+                margin-block-end: 15px;
+            }
+            h3 {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+@include small {
+    .Emploi {
+        .container {
+            padding: 10px;
+            .title {
+                font-size: 16px;
+            }
+            .text {
+                font-size: 12px;
+                line-height: normal;
+            }
+            h3 {
+                font-size: 13px;
+            }
+        }
+    }
+}

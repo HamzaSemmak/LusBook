@@ -1,0 +1,104 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the CONDITIONS GÉNÉRALES DE VENTE of the site/application.
+// -----------------------------------------------------------------------------
+
+
+@import '../abstracts/variables';
+@import '../abstracts/functions';
+@import '../abstracts/mixins';
+
+.Cgv {
+    width: 100%;
+    height: auto;
+    padding: 40px;
+    .container {
+        height: auto;
+        h1 {
+            font-size: 35px;
+            font-weight: 700;
+            text-align: center;
+            font-style: normal;
+            letter-spacing: 1.3px;
+            color: $primary-color;
+            margin-block-end: 25px;
+        }
+        .title {
+            font-size: 25px;
+            font-weight: 600;
+            font-style: normal;
+            letter-spacing: 1.2px;
+            color: $dark-color;
+        }
+        .text {
+            font-size: 16px;
+            font-weight: normal;
+            font-style: normal;
+            text-align: justify;
+            line-height: 25px;
+            margin-block-end: 20px;
+            color: $first-color;
+        }
+    }
+}
+
+/*
+*
+*   Media Query : 
+*
+*/
+@include large {
+    .Cgv {
+        padding: 30px;
+        .container {
+            h1 {
+                font-size: 30px;
+                margin-block-end: 20px;
+            }
+            .title {
+                font-size: 20px;
+            }
+            .text {
+                font-size: 15px;
+                margin-block-end: 15px;
+            }
+        }
+    }
+}
+
+@include meduim {
+    .Cgv {
+        padding: 10px;
+        .container {
+            h1 {
+                font-size: 25px;
+                margin-block-end: 15px;
+            }
+            .title {
+                font-size: 18px;
+            }
+            .text {
+                font-size: 14px;
+                margin-block-end: 10px;
+                text-align: justify;
+            }
+        }
+    }
+}
+
+@include small {
+    .Cgv {
+        .container {
+            h1 {
+                font-size: 18px;
+                margin-block-end: 10px;
+            }
+            .title {
+                font-size: 16px;
+            }
+            .text {
+                font-size: 12px;
+                line-height: normal;
+            }
+        }
+    }
+}

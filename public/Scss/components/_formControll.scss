@@ -1,0 +1,42 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the input of the site/application.
+// -----------------------------------------------------------------------------
+
+
+@import '../abstracts/functions';
+@import '../abstracts/mixins';
+@import '../abstracts/variables';
+
+.form-control {
+    color: $dark-color;
+    width: 99%;
+    height: auto;
+    margin-block: 8px;
+    padding: 12px;
+    border: 1px solid $first-color;
+    outline: none;
+    border-radius: 3px;
+    background-color: transparent;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    &::selection {
+        background-color: $dark-color;
+        color: $white-color;
+    }
+    &::placeholder {
+        font-size: 16px;
+        font-weight: 500;
+    }
+}
+
+@include meduim {
+    .form-control {
+        margin-block: 7px;
+        padding: 10px;
+        font-size: 14px;
+        &::placeholder {
+            font-size: 14px;
+        }
+    }
+}

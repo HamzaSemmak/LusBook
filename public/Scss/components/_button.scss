@@ -1,0 +1,88 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button of the site/application.
+// -----------------------------------------------------------------------------
+
+
+@import '../abstracts/functions';
+@import '../abstracts/mixins';
+@import '../abstracts/variables';
+
+.btn {
+    position: relative;
+    padding: 14px;
+    border: 0.5px solid $dark-color;
+    margin-block: 10px;
+    display: inline-block;
+    text-decoration: none;
+    color: $dark-color;
+    background-color: transparent;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.5s;
+    overflow: hidden;
+    font-size: 14px;
+    span {
+        position: absolute;
+        display: block;
+        width: 0px;
+        height: 0px;
+        transform: translate(-50%,  -50%);
+        border-radius: 50%;
+        background-color: $dark-color;
+        transition: width 0.5s, height 0.5s;
+        z-index: -1;
+    }
+    &:hover {
+        color: $white-color;
+        span {
+            width: 600px;
+            height: 600px;
+        }
+    }
+}
+
+@include meduim {
+    .btn , .btn-primary {
+        padding: 13px;
+        font-size: 13px;
+        &:hover {
+            span {
+                width: 300px;
+                height: 300px;
+            }
+        }
+    }
+}
+@include small {
+    .btn, .btn-primary  {
+        padding: 10px;
+        font-size: 12px;
+        &:hover {
+            span {
+                width: 300px;
+                height: 300px;
+            }
+        }
+    }
+}
+
+.btn-primary {
+    position: relative;
+    padding: 10px;
+    border: 0.5px solid $dark-color;
+    margin-block: 10px;
+    display: inline-block;
+    text-decoration: none;
+    color: $dark-color;
+    background-color: transparent;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    transition: 0.5s;
+    overflow: hidden;
+    font-size: 12px;
+    &:hover {
+        background-color: $dark-color;
+        color: $white-color;
+        transition: .3s;
+    }
+}

@@ -1,0 +1,28 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the 404 of the site/application.
+// -----------------------------------------------------------------------------
+
+
+@import '../abstracts/variables';
+@import '../abstracts/functions';
+@import '../abstracts/mixins';
+
+.page-404 {
+    padding: 40px;
+    width: 100%;
+    height: auto;
+    .container {
+        padding: 10px;
+        height: 100%;
+    }
+
+    @include large {
+        padding: 10px;
+    }
+    @include meduim {
+        padding: 0px;
+        .container {
+            padding: 5px;
+        }
+    }
+}

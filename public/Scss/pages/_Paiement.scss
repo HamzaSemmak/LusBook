@@ -1,0 +1,149 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the livraison of the site/application.
+// -----------------------------------------------------------------------------
+
+
+@import '../abstracts/functions';
+@import '../abstracts/mixins';
+@import '../abstracts/variables';
+
+.Paiement {
+    width: 100%;
+    height: auto;
+    padding: 40px;
+    .container {
+        padding: 10px;
+        height: 100%;
+        .title {
+            font-size: 30px;
+            font-weight: 700;
+            font-style: normal;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            text-align: center;
+            color: $primary-color;
+        }
+        .row {
+            width: 100%;
+            height: auto;
+            padding: 15px;
+            .col-6 {
+                padding: 20px;
+                .title {
+                    font-size: 30px;
+                    font-weight: 700;
+                    font-style: normal;
+                    letter-spacing: 1.2px;
+                    text-transform: uppercase;
+                    text-align: center;
+                }
+                .text {
+                    font-size: 14px;
+                    color: $first-color;
+                }
+            }
+        }
+    }
+}
+
+/*
+*
+*   Media Query : 
+*
+*/
+@include x-large {
+    .Paiement {
+        padding: 30px;
+        .container {
+            .title {
+                font-size: 30px;
+            }
+            .row {
+                padding: 0px;
+                .col-6 {
+                    padding: 0px;
+                    .title {
+                        font-size: 30px;
+                    }
+                    .text {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include large {
+    .Paiement {
+        padding: 20px;
+        .container {
+            .title {
+                font-size: 25px;
+            }
+            .row {
+                padding: 0px;
+                .col-6 {
+                    padding: 0px;
+                    .title {
+                        font-size: 25px;
+                    }
+                    .text {
+                        font-size: 14px;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include meduim {
+    .Paiement {
+        padding: 10px;
+        .container {
+            .title {
+                font-size: 20px;
+            }
+            .row {
+                .col-6 {
+                    img {
+                        padding-left: 30px;
+                        padding-right: 30px;
+                    }
+                    .title {
+                        font-size: 20px;
+                    }
+                    .text {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include small {
+    .Paiement {
+        padding: 0px;
+        .container {
+            .title {
+                font-size: 18px;
+            }
+            .row {
+                .col-6 {
+                    img {
+                        padding-left: 30px;
+                        padding-right: 30px;
+                    }
+                    .title {
+                        font-size: 18px;
+                    }
+                    .text {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,35 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the Variables of the site/application.
+// -----------------------------------------------------------------------------
+
+/* Colores */
+$light-color: #f8f9fa;
+$dark-color: #212529;
+$white-color: #fff;
+$gray-color: #d9d9d9;
+$black-light-color: #707070;
+$first-color: #333;
+$icon-color: #0d6efd;
+$primary-color: #000;
+$box1-color: #80bdff; /* 4DA3FF*/
+$box2-color: #FFE6AC;
+$box3-color: #E7D1FC;
+$border-color: #4d4c4c;
+/* Dashboard */
+$tran-05: all 0.5s ease;
+$tran-03: all 0.3s ease;
+$tran-02: all 0.2s ease;
+/* Pop alert */
+$danger-alert-color: #c2313d;
+$success-alert-color: #1e915b;
+/* Systeme Media Queries Breakpoints */
+$Breakpoints : (
+    "x-small": 350px,     
+    "small": 400px,       
+    "meduim": 600px,  
+    "large": 768px,    
+    "x-large": 997px,     
+    "xx-large": 1200px,   
+    "xxx-large": 1400px,  
+);
+

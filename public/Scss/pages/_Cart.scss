@@ -1,0 +1,232 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the panier of the site/application.
+// -----------------------------------------------------------------------------
+
+
+@import '../abstracts/variables';
+@import '../abstracts/functions';
+@import '../abstracts/mixins';
+  
+.panier {
+    width: 100%;
+    height: auto;
+    padding: 40px;
+    @include x-large {
+        padding: 5px;
+        margin-top: 20px;
+    }
+    .container-panier {
+        padding: 10px;
+        height: 100%;
+        margin: 0 auto;
+        max-width: 1600px;
+        width: 100%;
+        .title {
+            font-size: 30px;
+            font-weight: 700;
+            font-style: normal;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            text-align: center;
+            margin-block-end: 25px;
+            color: $primary-color;
+            @include meduim {
+                font-size: 22px;
+                margin-block-end: 15px;
+            }
+        } 
+        .lien-redirect {
+            font-size: 16px;
+            font-weight: 600;
+            font-style: normal;
+            color: $dark-color;
+            display: flex;
+            align-items: center;
+            margin-block-start: 20px;
+            @include meduim {
+                font-size: 13px;
+                margin-block-start: 10px;
+            }
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        .Cart-product-items {
+            width: 100%;
+            .col-8,
+            .col-4 {
+                padding: 20px;
+                @include x-large {
+                    padding: 10px;
+                }
+                .title-col {
+                    font-size: 18px;
+                    color: $primary-color;
+                    font-weight: 900;
+                    text-transform: uppercase;
+                }
+                .d-flex {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+                .cart-item {
+                    font-size: 16px;
+                    color: $black-light-color;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                }
+                hr {
+                    margin-block: 25px;
+                    border: 1px solid $white-color;
+                    background-color: $white-color;
+                    border-radius: 10px;
+                    @include x-large {
+                        margin-block: 10px;
+                    }
+                }
+                .th-xxl {
+                    min-width: 350px;
+                    @include x-large {
+                        min-width: 300px;
+                    }
+                    @include large {
+                        min-width: 200px;
+                    }
+                    @include meduim{
+                        min-width: auto;
+                    }
+                }
+                .th-sm {
+                    min-width: 150px;
+                    @include x-large {
+                        min-width: 120px;
+                    }
+                    @include large {
+                        min-width: 40px;
+                    }
+                    @include meduim{
+                        min-width: auto;
+                    }
+                }
+                tr {
+                    td {
+                        font-size: 14px;
+                        font-weight: 400;
+                        color: $dark-color;
+                        position: relative;
+                        max-height: 150px;
+                        @include meduim {
+                            font-size: 12px;
+                        }
+                        .product-img {
+                            max-width: 90px !important;
+                            width: 100%;
+                            height: 115px;
+                            margin-right: 5px;
+                            @include x-large {
+                                max-width: 40px;
+                                width: 100%;
+                                height: 90px;
+                            }
+                            @include large {
+                                display: none;
+                            }
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                max-width: 100%;
+                            }
+                        }
+                        .name {
+                            font-size: 14px;
+                            font-weight: 900;
+                            color: $dark-color;
+                            text-transform: uppercase;
+                            @include x-large {
+                                font-size: 13px;
+                            }
+                        }
+                        .category {
+                            font-size: 14px;
+                            color: $first-color;
+                            font-weight: 400;
+                            margin-block-start: 5px;
+                            @include x-large {
+                                margin-block-start: 5px;
+                                font-size: 12px;
+                            }
+                        }
+                        .author {
+                            font-size: 15px;
+                            color: $primary-color;
+                            margin-block-end: 5px;
+                            font-weight: 400;
+                            @include x-large {
+                                font-size: 13px;
+                                margin-block-end: 5px;
+                            }
+                        }
+                        .remove {
+                            position: absolute;
+                            bottom: 5%;
+                            @include x-large {
+                                position: relative;
+                            }
+                            a {
+                                color: #c2313d;
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                    td:nth-child(1) {
+                        display: flex;
+                        align-items: flex-start;
+                        justify-content: flex-start;
+                        text-align: left;
+                    }
+                }
+            }
+            .col-8 {
+                background-color: $white-color;
+            }
+            .col-4 {
+                background-color: transparent;
+                .d-flex {
+                    margin-top: 10px;
+                    @include meduim {
+                        margin-top: 4px;
+                    }
+                }
+                .first-col {
+                    font-size: 16px;
+                    text-transform: uppercase;
+                    font-weight: 500;
+                    color: $black-light-color;
+                    @include meduim {
+                        font-size: 14px;
+                    }
+                }
+                .second-col {
+                    font-size: 16px;
+                    text-transform: uppercase;
+                    color: $dark-color;
+                    font-weight: 600;
+                    @include meduim {
+                        font-size: 14px;
+                    }
+                }
+                .active-hr {
+                    border: 1px solid $gray-color;
+                    background-color: $gray-color;
+                    border-radius: 5px;
+                    width: 100%;
+                    margin-top: 30px;
+                    @include meduim {
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

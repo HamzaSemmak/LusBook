@@ -1,0 +1,209 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the login of the site/application.
+// -----------------------------------------------------------------------------
+
+
+@import '../abstracts/functions';
+@import '../abstracts/mixins';
+@import '../abstracts/variables';
+
+.login_admin {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .content {
+        width: 1200px;
+        height: 600px;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2) !important;
+        padding: 0px;
+        .row {
+            width: 100%;
+            height: 100%;
+            padding: 0px;
+            margin: 0px;
+            .col-6 {
+                display: flex;
+                flex-direction: column;
+                padding: 0px;
+                margin: 0px;
+                .red-marque {
+                    color: red;
+                }
+                label {
+                    font-size: 15px;
+                    color: $first-color;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                }
+                img {
+                    width: 200px;
+                    height: 200px;
+                    margin-block-end: 25px;
+                }
+                .title {
+                    font-size: 25px;
+                    font-weight: 700;
+                    color: $dark-color;
+                    margin-block-end: 15px;
+                }
+                .text {
+                    text-align: justify;
+                    color: $first-color;
+                    font-size: 15px;
+                }
+                .logo {
+                    font-size: 30px;
+                    font-weight: 700;
+                    letter-spacing: 1.2px;
+                    color: $first-color;
+                    margin-block-end: 30px;
+                    span {
+                        text-decoration: underline $dark-color;
+                    }
+                }
+                form {
+                    padding: 10px;
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            .col-6:nth-child(2) {
+                padding: 15px;
+                align-items: center;
+                justify-content: center;
+            }
+            .col-6:nth-child(1) {
+                padding: 20px;
+                align-items: flex-start;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+/*
+*
+*   Media Query : 
+*
+*/
+@include xx-large {
+    .login_admin {
+        width: 100%;
+        height: 100vh;
+        .content {
+            width: 98%;
+            height: 600px;
+        }
+    }
+}
+
+@include x-large {
+    .login_admin {
+        width: 100%;
+        height: 100vh;
+        .content {
+            width: 95%;
+            height: auto;
+            .row {
+                display: flex;
+                flex-direction: column-reverse;
+            }
+        }
+    }
+}
+
+@include large {
+    .login_admin {
+        width: 100%;
+        height: 100vh;
+        .content {
+            width: 95%;
+            height: 500px;
+            position: relative;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3) !important;
+            .row {
+                .col-6 {
+                    img {
+                        width: 200px;
+                        height: 200px;
+                        margin-block-end: 25px;
+                        position: absolute;
+                        left: 50%;
+                        top: 0;
+                        transform: translate(-50%, -50%);
+                    }
+                    label {
+                        font-size: 14px;
+                    }
+                    .title,
+                    .text  {
+                        display: none;
+                    }
+                    .logo {
+                        font-size: 25px;
+                        margin-block-end: 0;
+                        text-align: center;
+                        width: 100%;
+                    }
+                    form {
+                        padding: 10px;
+                    }
+                }
+                .col-6:nth-child(2) {
+                    padding: 15px;
+                }
+                .col-6:nth-child(1) {
+                    padding: 20px;
+                }
+            }
+        }
+    }
+}
+
+@include meduim {
+    .login_admin {
+        .content {
+            width: 95%;
+            height: auto;
+            .row {
+                .col-6 {
+                    img {
+                        display: none;
+                    }
+                    label {
+                        font-size: 12px;
+                    }
+                    .logo {
+                        font-size: 18px;
+                    }
+                    form {
+                        padding: 5px;
+                    }
+                }
+                .col-6:nth-child(1) {
+                    padding: 10px;
+                }
+            }
+        }
+    }
+}
+
+@include small {
+    .login_admin {
+        .content {
+            width: 96%;
+            .row {
+                .col-6 {
+                    label {
+                        font-size: 11px;
+                    }
+                    .logo {
+                        font-size: 17px;
+                    }
+                }
+            }
+        }
+    }
+}

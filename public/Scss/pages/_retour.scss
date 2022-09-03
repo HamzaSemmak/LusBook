@@ -1,0 +1,158 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the livraison of the site/application.
+// -----------------------------------------------------------------------------
+
+
+@import '../abstracts/functions';
+@import '../abstracts/mixins';
+@import '../abstracts/variables';
+
+.retour {
+    width: 100%;
+    height: auto;
+    padding: 40px;
+    .container {
+        padding: 10px;
+        height: 100%;
+        .title {
+            font-size: 30px;
+            font-weight: 700;
+            font-style: normal;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            text-align: center;
+            color: $primary-color;
+        }
+        .text {
+            font-size: 16px;
+            color: $first-color;
+            text-align: center;
+        } 
+        .left {
+            text-align: left;
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+        .group-card {
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            .retour-card {
+                width: auto;
+                height: 50px;
+                margin: 10px 15px;
+                display: flex;
+                align-items: center;
+                .card-title {
+                    font-size: 35px;
+                    margin: 0px 20px;
+                    color: $dark-color;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .card-text {
+                    font-size: 14px;
+                    font-weight: 600;
+                    color: $first-color;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+/*
+*
+*   
+*
+*/
+@include x-large {
+    .retour {
+        padding: 10px;
+        .container {
+            padding: 0px;
+            .title {
+                font-size: 25px;
+            }
+            .text {
+                font-size: 15px;
+            } 
+            .left {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            .group-card {
+                align-items: center;
+                justify-content: center;
+                .retour-card {
+                    height: auto;
+                    width: 400px;
+                    margin: 25px 15px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    .card-title {
+                        font-size: 35px;
+                    }
+                    .card-text {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }    
+}
+
+@include meduim {
+    .retour {
+        .container {
+            .title {
+                font-size: 22px;
+            }
+            .text {
+                font-size: 14px;
+            } 
+            .left {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            .group-card {
+                .retour-card {
+                    width: 100%;
+                    .card-title {
+                        font-size: 30px;
+                    }
+                    .card-text {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }    
+}
+
+@include small {
+    .retour {
+        .container {
+            .title {
+                font-size: 18px;
+            }
+            .text {
+                font-size: 12px;
+            }
+            .group-card {
+                .retour-card {
+                    width: 100%;
+                    .card-title {
+                        font-size: 25px;
+                    }
+                    .card-text {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }    
+}

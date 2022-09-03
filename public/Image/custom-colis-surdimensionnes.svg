@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+  <g>
+    <g>
+      <rect x="5.01" y="9.41" width="29.97" height="21.19" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="1.6"/>
+      <polyline points="23.5 9.41 23.5 13.56 20 12.13 16.5 13.56 16.5 9.41" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="1.6"/>
+      <polyline points="16.5 30.43 16.5 26.27 20 27.7 23.5 26.27 23.5 30.43" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="1.6"/>
+    </g>
+    <g>
+      <path d="M19.88,20.24l-1.39-3.18h-.86V23h1V19.72L20,23h.82V17.06h-1Z" fill="#020202"/>
+      <path d="M29.67,17.06l-.88,1.74-.88-1.74H27V23h1V19.32l.59,1.16H29l.57-1.15V23h1V17.06Z" fill="#020202"/>
+      <path d="M25,17.06H22.9l-.43.42v5l.45.45h2l.44-.45,0-5ZM23.43,22V18h1v4Z" fill="#020202"/>
+      <path d="M14.48,22V20.48h1.17v-1H14.48V18H16v-1H14l-.45.44v5L14,23h2V22Z" fill="#020202"/>
+      <g>
+        <rect x="10.41" y="19.52" width="1.16" height="0.96" fill="#020202"/>
+        <rect x="9.44" y="20.48" width="0.96" height="2.47" fill="#020202"/>
+        <path d="M11.91,18v-1h-2l-.45.45v2h1V18Z" fill="#020202"/>
+      </g>
+    </g>
+  </g>
+</svg>

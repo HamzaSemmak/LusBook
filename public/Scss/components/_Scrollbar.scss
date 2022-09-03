@@ -1,0 +1,21 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the Scrollbar of the site/application.
+// -----------------------------------------------------------------------------
+
+@import '../abstracts/variables';
+
+/* width */
+body::-webkit-scrollbar {
+    width: 15px;
+    background-color: $white-color;
+}
+
+body::-webkit-scrollbar-thumb {
+    height: 50px;
+    background-color: $dark-color;
+}
+
+/* Handle on hover */
+body::-webkit-scrollbar-thumb:hover {
+    background: $dark-color; 
+}

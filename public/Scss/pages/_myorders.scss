@@ -1,0 +1,248 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the Home/MyOrder of the site/application.
+// -----------------------------------------------------------------------------
+
+
+@import '../abstracts/functions';
+@import '../abstracts/mixins';
+@import '../abstracts/variables';
+
+
+.myorders {
+    width: 100%;
+    height: auto;
+    .container {
+        height: auto;
+        margin-top: 30px;
+        .title {
+            font-size: 30px;
+            text-transform: uppercase;
+            font-weight: 600; 
+            font-style: normal;
+            margin-block-end: 25px;
+            color: $primary-color;
+        }
+        .content {
+            width: 100%;
+            height: 100%;
+            .myOrders-list {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.btn-print {
+    position: fixed;
+    left: 30px;
+    top: 20px;
+    z-index: 1;
+    @include x-large {
+        position: absolute;
+        top: 5%;
+        left: 50%;
+        transform: translate(-50% , -50%);
+    }
+    button {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: none;
+        outline: none;
+        color: $white-color;
+        background-color: #28ad6f;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.150) !important;
+        cursor: pointer;
+        @include x-large {
+            font-size: 18px;
+            width: 40px;
+            height: 40px;
+        }
+    }
+}
+
+.Detail {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    .content {
+        max-width: 800px;
+        margin: 0 auto;
+        width: 100%;
+        padding: 30px;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.06) !important;
+        background-color: $white-color;
+        position: relative;
+        top: 20px;
+        border-radius: 4px;
+        @include x-large {
+            padding: 5px;
+        }
+        .d-flex {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .logo {
+                display: flex;
+                align-items: center;
+                flex-direction: row;
+                ion-icon {
+                    font-size: 35px;
+                    color: $primary-color;
+                    transition: $tran-02;
+                }
+                span {
+                    font-size: 20px;
+                    font-style: normal;
+                    color: $primary-color;
+                    margin-left: 10px;
+                    font-weight: 600;
+                    letter-spacing: 1.5px;
+                    transition: $tran-05;
+                }
+            }
+            .detail-title {
+                font-size: 24px;
+                font-style: normal;
+                color: $primary-color;
+                font-weight: 600;
+                transition: $tran-05;
+            }
+        }
+        .facture-content {
+            .title {
+                font-size: 20px;
+                font-weight: 600;
+                color: $first-color;
+                margin: 10px 0;
+                position: relative;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 30px;
+                    left: 0%;
+                    width: 30%;
+                    height: 2px;
+                    background-color: $dark-color;
+                    border-radius: 10px;
+                }
+            }
+            .table {
+                text-align: left;
+                td {
+                    position: relative;
+                    padding: 6px;
+                    &:nth-child(1) {
+                        font-size: 15px;
+                        font-weight: 500;
+                    }
+                }
+                .th-xxl {
+                    min-width: 350px;
+                    @include x-large {
+                        min-width: 300px;
+                    }
+                    @include large {
+                        min-width: 200px;
+                    }
+                    @include meduim{
+                        min-width: auto;
+                    }
+                }
+                .th-sm {
+                    min-width: 150px;
+                    @include x-large {
+                        min-width: 120px;
+                    }
+                    @include large {
+                        min-width: 40px;
+                    }
+                    @include meduim{
+                        min-width: auto;
+                    }
+                }
+            }
+            .table-style-one {
+                td {
+                    padding: 1px;
+                    position: relative;
+                    &:nth-child(1) {
+                        font-size: 16px;
+                        width: 25%;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+        .facture-information {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            font-size: 10px;
+            font-weight: 400;
+            color: $first-color;
+            text-align: center;
+            user-select: none;
+        }
+    }
+}
+
+
+/*
+*
+*   Media Query : 
+*
+*/
+@include x-large {
+    .myorders {
+        padding: 10px;
+        .container {
+            margin-top: 20px;
+            .title {
+                font-size: 25px;
+                text-align: center;
+                margin-block-end: 25px;
+            }
+            .content {
+                .myOrders-list {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@include large {
+    .myorders {
+        .container {
+            margin-top: 18px;
+            .title {
+                font-size: 20px;
+                margin-block-end: 20px;
+            }
+        }
+    }
+}
+
+@include meduim {
+    .myorders {
+        .container {
+            margin-top: 15px;
+            .title {
+                font-size: 18px;
+                margin-block-end: 15px;
+            }
+            .content {
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,228 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the Alert Popup of the site/application.
+// -----------------------------------------------------------------------------
+
+
+@import '../abstracts/functions';
+@import '../abstracts/mixins';
+@import '../abstracts/variables';
+
+
+.toast {
+    background-color: $white-color;
+    position: absolute;
+    top: 45px;
+    right: 30px;
+    border-radius: 12px;
+    padding: 15px 30px 15px 20px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+    -webkit-animation-name: popupAlert;
+    -webkit-animation-duration: 0.9s;
+    animation-name: popupAlert;
+    animation-duration: 0.9s;
+    display: block;
+    .closeAlertPopup {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        padding: 5px;
+        cursor: pointer;
+        font-size: 14px;
+        opacity: 0.7;
+        &:hover {
+            opacity: 1;
+        }
+    }
+    .toast-content {
+        display: flex;
+        align-items: center;
+        .msg {
+            display: flex;
+            flex-direction: column;
+            margin: 0 20px;
+            .text {
+                font-size: 16px;
+                font-weight: 400;
+                color: #666666;
+            }
+            .text-one {
+                font-weight: 600;
+                color: #333;
+            }
+        }
+        .check {
+            height: 30px;
+            width: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $white-color;
+            font-size: 17px;
+            border-radius: 50%;
+        }
+    }
+    .progress {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 3px;
+        width: 100%;
+        background-color: transparent;
+        &:before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            animation: progress 5s linear forwards;
+        }
+    }
+}
+@-webkit-keyframes popupAlert {
+    from {
+        transform: translateX(calc(100% + 30px));
+    }
+    to {
+        transform: translateX(0%)
+    }
+}
+@keyframes popupAlert {
+    from {
+        transform: translateX(calc(100% + 30px));
+    }
+    to {
+        transform: translateX(0%)
+    }
+}
+@keyframes progress {
+    from {
+        right: 0%
+    }
+    to {
+        right: 100%;
+    }
+}
+
+
+.toast-danger {
+    border-left: 6px solid $danger-alert-color;
+    .toast-content {
+        .check {
+            background-color: $danger-alert-color;
+        }
+    }
+    .progress {
+        &:before {
+            background-color: $danger-alert-color;
+        }
+    }
+}
+.toast-success {
+    border-left: 6px solid $success-alert-color;
+    .toast-content {
+        .check {
+            background-color: $success-alert-color;
+        }
+    }
+    .progress {
+        &:before {
+            background-color: $success-alert-color;
+        }
+    }
+}
+
+
+@include x-large {
+    .toast {
+        background-color: $white-color;
+        position: absolute;
+        top: 20px;
+        right: 25px;
+        border-radius: 12px;
+        padding: 12px 27px 12px 17px;
+        .closeAlertPopup {
+            top: 10px;
+            right: 10px;
+            font-size: 14px;
+        }
+        .toast-content {
+            .msg {
+                margin: 0 12px;
+                .text {
+                    font-size: 14px;
+                }
+            }
+            .check {
+                height: 25px;
+                width: 25px;
+                font-size: 15px;
+            }
+        }
+        .progress {
+            height: 3px;
+        }
+    }
+}
+
+@include meduim {
+    .toast {
+        top: 10px;
+        right: 10px;
+        border-radius: 10px;
+        padding: 10px 25px 10px 15px;
+        .closeAlertPopup {
+            top: 8px;
+            right: 8px;
+            font-size: 13px;
+        }
+        .toast-content {
+            .msg {
+                margin: 0 8px;
+                .text {
+                    font-size: 12px;
+                }
+            }
+            .check {
+                height: 23px;
+                width: 23px;
+                font-size: 14px;
+            }
+        }
+        .progress {
+            height: 2px;
+        }
+    }
+    .toast-danger {
+        border-left: 4px solid $danger-alert-color;
+    }
+    .toast-success {
+        border-left: 4px solid $success-alert-color;
+    }
+}
+@include small {
+    .toast {
+        top: 8px;
+        right: 8px;
+        padding: 8px 23px 8px 13px;
+        .closeAlertPopup {
+            top: 2px;
+            right: 5px;
+            font-size: 13px;
+        }
+        .toast-content {
+            .msg {
+                margin: 0 8px;
+                .text {
+                    font-size: 10px;
+                }
+            }
+            .check {
+                height: 21px;
+                width: 21px;
+                font-size: 12px;
+            }
+        }
+    }
+}

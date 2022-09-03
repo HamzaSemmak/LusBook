@@ -1,0 +1,159 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the faq of the site/application.
+// -----------------------------------------------------------------------------
+
+
+@import '../abstracts/functions';
+@import '../abstracts/mixins';
+@import '../abstracts/variables';
+
+.Faq {
+    width: 100%;
+    height: auto;
+    padding: 40px;
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        .titre {
+            font-size: 25px;
+            font-weight: 600;
+            font-style: normal;
+            letter-spacing: 1.2px;
+            color: $primary-color;
+            margin-block-end: 25px;
+        }
+        .accordion {
+            width: 700px;
+            margin: 0 15px;
+            border-radius: 3px;
+            .accordion-content {
+                margin: 10px 0;
+                overflow: hidden;
+                .accordian-header {
+                    display: flex;
+                    min-height: 50px;
+                    padding: 0 15px;
+                    align-items: center;
+                    border-radius: 3px;
+                    justify-content: space-between;
+                    background-color: $light-color;
+                    transition: all 0.2s linear;
+                    cursor: pointer;
+                    .title {
+                        font-size: 16px;
+                        font-weight: 500;
+                    }
+                    i {
+                        font-size: 20px;
+                        font-weight: 900;
+                        color: $first-color;
+                    }
+                }
+                .accordian-description {
+                    height: 0;
+                    padding: 0px 15px;
+                    font-size: 14px;
+                    color: $first-color;
+                    transition: all 0.3s linear;
+                }
+            }
+        }
+    }
+}
+
+/*
+*
+*   Media Query : 
+*
+*/
+@include large {
+    .Faq {
+        padding: 10px;
+        .container {
+            .titre {
+                font-size: 25px;
+                margin-block-end: 25px;
+            }
+            .accordion {
+                width: 100%;
+                max-width: 700px;
+                margin: 0 10px;
+                .accordion-content {
+                    .accordian-header {
+                        display: flex;
+                        min-height: 50px;
+                        padding: 0 10px;
+                        .title {
+                            font-size: 13px;
+                        }
+                        i {
+                            font-size: 17px;
+                        }
+                    }
+                    .accordian-description {
+                        padding: 0px 10px;
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include meduim {
+    .Faq {
+        .container {
+            .titre {
+                font-size: 20px;
+                margin-block-end: 20px;
+            }
+            .accordion {
+                .accordion-content {
+                    .accordian-header {
+                        padding: 0 10px;
+                        .title {
+                            font-size: 12px;
+                        }
+                        i {
+                            font-size: 14px;
+                        }
+                    }
+                    .accordian-description {
+                        padding: 0px 10px;
+                        font-size: 11px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include small {
+    .Faq {
+        .container {
+            .titre {
+                font-size: 20px;
+                margin-block-end: 20px;
+            }
+            .accordion {
+                .accordion-content {
+                    .accordian-header {
+                        padding: 0 5px;
+                        .title {
+                            font-size: 11px;
+                        }
+                        i {
+                            font-size: 14px;
+                        }
+                    }
+                    .accordian-description {
+                        padding: 0px 5px;
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

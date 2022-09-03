@@ -1,0 +1,48 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button of the site/application.
+// -----------------------------------------------------------------------------
+
+
+@import '../abstracts/functions';
+@import '../abstracts/mixins';
+@import '../abstracts/variables';
+
+
+.msg-danger {
+    color: #e62c3b;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.msg-success {
+    color: #0f5132;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+@include large {
+    .msg-danger, 
+    .msg-success {
+        font-size: 14px;
+    }
+}
+
+@include meduim {
+    .msg-danger, 
+    .msg-success {
+        font-size: 12px;
+    }
+}
+
+@include small {
+    .msg-danger, 
+    .msg-success {
+        font-size: 11px;
+    }
+}
+@include x-small {
+    .msg-danger, 
+    .msg-success {
+        font-size: 10px;
+    }
+}
