@@ -111,9 +111,4 @@ class AdminController extends Controller
 
         return $Product;
     }
-
-
-    public function Products() {
-        return 'hello';
-    }
 }

@@ -109,4 +109,6 @@ Route::get("/Products", [LusproductController::class, 'index']);
 Route::get("/productcreate", [LusproductController::class, 'create']);
 Route::get("/productedit/{id}", [LusproductController::class, 'edit']);
 Route::get("/productremove/{id}", [LusproductController::class, 'delete']);
+Route::get("/productshow/{id}", [LusproductController::class, 'show']);
 Route::post("/SaveProduct", [LusproductController::class, 'SaveProduct']);
+Route::post("/EditProduct/{id}", [LusproductController::class, 'EditProduct']);

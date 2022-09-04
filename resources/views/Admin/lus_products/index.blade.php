@@ -34,6 +34,7 @@
                             <td> {{ $item->category }} </td>
                             <td> {{ $item->price }} </td>
                             <td> 
+                                <a href="productshow/{{ $item->id }}"> <i class="fa-regular fa-eye"></i> </a>
                                 <a href="productedit/{{ $item->id }}"> <i class="fa-solid fa-pen"></i> </a>
                                 <a href="productremove/{{ $item->id }}"> <i class="fa-solid fa-trash"></i> </a>
                             </td>
