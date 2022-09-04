@@ -47,6 +47,12 @@
                     <span class="sidebar-link-name"> Produit </span>
                 </a>
             </li>
+            <li class="sidebar-link">
+                <a href="/Users">
+                    <i class="fa-regular fa-user"></i>
+                    <span class="sidebar-link-name"> Users </span>
+                </a>
+            </li>
         </ul>
     </div>
     <div class="dashboard-content">
@@ -54,10 +60,10 @@
             <div>
                 <i class="fa-solid fa-bars sidebar-dashboard-toggler"></i>
             </div>
-            <form class="search-box" action="/search" role="search">
+            {{-- <form class="search-box" action="/search" role="search">
                 <input name="query" type="text" placeholder="Rechercher Produit..." aria-label="search" class="search-txt" required>
                 <button type="submit" class="search-btn"> <ion-icon name="search"></ion-icon> </button>
-            </form>
+            </form> --}}
             <div class="admin-box">
                 <div class="admin-name">
                     <img src="{{ url('./Image/face avatar.png') }}" alt="">

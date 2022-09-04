@@ -104,7 +104,7 @@
                 <div class="title-section">
                     Client
                 </div>
-                <a href="#" class="link">
+                <a href="/Users" class="link">
                     Voir Tout
                 </a>
             </div>
@@ -129,7 +129,7 @@
                 <div class="title-section">
                     Produit 
                 </div>
-                <a href="#" class="link">
+                <a href="/Products" class="link">
                     Voir Tout
                 </a>
             </div>
