@@ -12,6 +12,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\FavoritesController;
 use App\Http\Controllers\LusproductController;
 use App\Http\Controllers\LususersController;
+use App\Http\Controllers\LuscontactsController;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -113,10 +114,15 @@ Route::get("/productremove/{id}", [LusproductController::class, 'delete']);
 Route::get("/productshow/{id}", [LusproductController::class, 'show']);
 Route::post("/SaveProduct", [LusproductController::class, 'SaveProduct']);
 Route::post("/EditProduct/{id}", [LusproductController::class, 'EditProduct']);
-
 /*
 *   LususersController
 */
 Route::get("/Users", [LususersController::class, 'index']);
 Route::get("/userremove/{id}", [LususersController::class, 'delete']);
 Route::get("/usershow/{id}", [LususersController::class, 'show']);
+/*
+*   LuscontactsController
+*/
+Route::get("/contacts", [LuscontactsController::class, 'index']);
+Route::get("/contactremove/{id}", [LuscontactsController::class, 'delete']);
+Route::get("/contactshow/{id}", [LuscontactsController::class, 'show']);

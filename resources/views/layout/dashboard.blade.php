@@ -53,6 +53,12 @@
                     <span class="sidebar-link-name"> Users </span>
                 </a>
             </li>
+            <li class="sidebar-link">
+                <a href="/contacts">
+                    <i class="fa-solid fa-address-book"></i>
+                    <span class="sidebar-link-name"> Contact </span>
+                </a>
+            </li>
         </ul>
     </div>
     <div class="dashboard-content">
