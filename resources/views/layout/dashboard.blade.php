@@ -48,6 +48,12 @@
                 </a>
             </li>
             <li class="sidebar-link">
+                <a href="/Orders">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="sidebar-link-name"> Commande </span>
+                </a>
+            </li>
+            <li class="sidebar-link">
                 <a href="/Users">
                     <i class="fa-regular fa-user"></i>
                     <span class="sidebar-link-name"> Users </span>

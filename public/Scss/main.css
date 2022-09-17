@@ -11633,7 +11633,7 @@ body::-webkit-scrollbar-thumb:hover {
 .slick-next,
 .slick-prev {
   position: absolute;
-  top: -9%;
+  top: -8%;
   transform: translate(-50%, -50%);
   font-size: 26px;
   color: #000;
@@ -11663,12 +11663,17 @@ body::-webkit-scrollbar-thumb:hover {
 }
 @media only screen and (max-width: 997px) {
   .slick-next {
-    right: 4%;
+    display: none;
   }
 }
 
 .slick-prev {
   right: 0%;
+}
+@media only screen and (max-width: 997px) {
+  .slick-prev {
+    display: none;
+  }
 }
 
 /* Colores */

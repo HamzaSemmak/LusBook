@@ -11,7 +11,7 @@
 .slick-next,
 .slick-prev {
     position: absolute;
-    top: -9%;
+    top: -8%;
     transform: translate(-50%, -50%);
     font-size: 26px;
     color: $primary-color;
@@ -29,10 +29,13 @@
 .slick-next {
     right: 2%;
     @include x-large {
-        right: 4%;
+        display: none;
     }
 }
 .slick-prev {
     right: 0%;
+    @include x-large {
+        display: none;
+    }
 }
 
