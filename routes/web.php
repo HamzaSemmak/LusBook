@@ -131,3 +131,5 @@ Route::get("/contactshow/{id}", [LuscontactsController::class, 'show']);
 *   LusordersController
 */
 Route::get("/Orders", [LusordersController::class, 'index']);
+Route::get("/ordershow/{id}", [LusordersController::class, 'show']);
+Route::get("/deleteshow/{id}", [LusordersController::class, 'delete']);

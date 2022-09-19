@@ -31,8 +31,8 @@
                             <td> {{ $item->total }} </td>
                             <td> {{ $item->date }} </td>
                             <td> 
-                                <a href="/{{ $item->id }}"> <i class="fa-regular fa-eye"></i> </a>
-                                <a href="/{{ $item->id }}"> <i class="fa-solid fa-trash"></i> </a>
+                                <a href="ordershow/{{ $item->id }}"> <i class="fa-regular fa-eye"></i> </a>
+                                <a href="deleteshow/{{ $item->id }}"> <i class="fa-solid fa-trash"></i> </a>
                             </td>
                         </tr>
                     @endforeach
