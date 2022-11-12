@@ -2,7 +2,7 @@
 
 @section('content')
     <main class="Cgv">
-        <div class="container Soufiane-Test">
+        <div class="container Soufiane-Test-Local">
             <h1> CONDITIONS GÉNÉRALES DE VENTE </h1>
             <div>
                 <div class="title">
